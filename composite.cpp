@@ -1,5 +1,8 @@
 #include "composite.h"
 #include "Iterator.h"
+#include "NullIterator.h"
+#include "OperatorIterator.h"
+#include "UnaryIterator.h"
 
 //--------------------------------------------------------------------------
 // Op Class

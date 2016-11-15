@@ -3,9 +3,7 @@
 #include <iostream>
 #include "composite.h"
 
-class Base;
-
-class Iterator{
+class Iterator {
     protected:
         Base* self_ptr;
         Base* current_ptr;

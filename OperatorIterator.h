@@ -15,27 +15,32 @@ class OperatorIterator: public Iterator {
     Base* current();
 };
 
-OperatorIterator::OperatorIterator(Base* ptr): Iterator(ptr) {}
+OperatorIterator::OperatorIterator(Base* ptr): Iterator(ptr) {
+  std::cout << "created operatorIterator\n";
+}
 
-Base* OperatorIterator::first() {
+void OperatorIterator::first() {
   this->current_ptr = this->self_ptr->get_left();  
-  return this->current_ptr;
 }
 
 void OperatorIterator::next() {
-  if (this->current_ptr = this->self_ptr->get_left())
+  if (this->current_ptr == this->self_ptr->get_left()) {
     this->current_ptr = this->self_ptr->get_right();
-  if (this->current_ptr = this->self_ptr->get_right())
+    std::cout << "operator iterator iterated to right hand child\n";
+  }
+  if (this->current_ptr == this->self_ptr->get_right())
     this->current_ptr = NULL;
+  std::cout << "invoked OperatorIter's next\n";
 }
 
 bool OperatorIterator::is_done() {
-  if (this->current_ptr = NULL || this->current_ptr = this->self_ptr->get_right()) 
+  if (this->current_ptr == NULL || this->current_ptr == this->self_ptr->get_right()) 
     return true;
   return false;
 }
 
 Base* OperatorIterator::current() {
+  std::cout << "returning operatorIterator's current\n";
   return this->current_ptr;
 }
 #endif

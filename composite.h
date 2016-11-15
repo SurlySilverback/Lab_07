@@ -5,13 +5,14 @@
 #include <sstream>
 #include <math.h>
 #include <string>
-#include "Iterator.h"
+
 
 using namespace std;
 
 class Iterator;
-class NullIterator;
 class UnaryIterator;
+class OperatorIterator;
+class NullIterator;
 
 //Abstract Base Class
 class Base {

@@ -4,13 +4,16 @@
 #include "Iterator.h"
 #include <stack>
 
-class PreOrderIterator : public Iterator {
+class PreOrderIterator: public Iterator {
+  //inherited:
+  //  Base* self_ptr;
+  //  Base* current_ptr;
 
     protected:
-        stack<Iterator*> iterators;
+        std::stack<Iterator*> iterators;
 
     public:
-        PreOrderIterator( Base* ptr );
+        PreOrderIterator(Base* ptr);
 
         void first();
         void next();
