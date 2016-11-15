@@ -1,12 +1,11 @@
 #ifndef ITERATOR_H
 #define ITERATOR_H
-
-//fwd declare
-class Base;
+#include <iostream>
+#include "composite.h"
 
 class Iterator{
     protected:
-        Base* self_ptr:
+        Base* self_ptr;
         Base* current_ptr;
 
     public:

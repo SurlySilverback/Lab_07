@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "composite.h"
+//#include "PreOrderIterator.h"
 
 using namespace std;
 
@@ -15,9 +16,9 @@ int main() {
 	Root* root = new Root(sub);
 
 	cout << "--- PreOrder Iteration ---" << endl;
-	PreOrderIterator* pre_itr = new PreOrderIterator(root);
-	for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next()) {
-		pre_itr->current()->print();
-		cout << endl;
-	}
+	//PreOrderIterator* pre_itr = new PreOrderIterator(root);
+	//for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next()) {
+	//	pre_itr->current()->print();
+	//	cout << endl;
+	//}
 };

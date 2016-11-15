@@ -1,11 +1,11 @@
-#ifndef __COMPOSITE_CLASS__
-#define __COMPOSITE_CLASS__
+#ifndef COMPOSITE_H
+#define COMPOSITE_H
 
 #include <iostream>
 #include <sstream>
 #include <math.h>
 #include <string>
-#include "iterator.h"
+#include "Iterator.h"
 
 using namespace std;
 
@@ -115,4 +115,4 @@ class Root: public UnaryOperator {
         double evaluate();
 };
 
-#endif //__COMPOSITE_CLASS__
+#endif
