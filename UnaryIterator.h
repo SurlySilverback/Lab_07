@@ -1,6 +1,6 @@
 #ifndef UNARY_ITERATOR_H
 #define UNARY_ITERATOR_H
-#include "iterator.h"
+#include "Iterator.h"
 class UnaryIterator: public Iterator {
   //  Base* self_ptr; 
   //  Base* current_ptr;
@@ -14,14 +14,17 @@ class UnaryIterator: public Iterator {
     Base* current();
 };
 
-UnaryIterator::UnaryIterator(Base* ptr): Iterator(ptr) {std::cout << "constructor unary iterator\n";}
+UnaryIterator::UnaryIterator(Base* ptr): Iterator(ptr) {std::cout << "Constructor: Unary Iterator\n";}
 
 void UnaryIterator::first() {
   this->current_ptr = this->self_ptr->get_left();
 }
 
 void UnaryIterator::next() {
-  std::cout << "unaryIterator next() invoked\n";
+  std::cout << "Unary: Inside ";
+  this->current_ptr->print();
+  std::cout << "'s next()\n";
+  
   this->current_ptr = NULL;
 }
 
@@ -32,7 +35,7 @@ bool UnaryIterator::is_done() {
 }
 
 Base* UnaryIterator::current() {
-  std::cout << "returning unaryiter's current\n";
+  //std::cout << "Returning unaryiter's current\n";
   return this->current_ptr;
 }
 #endif

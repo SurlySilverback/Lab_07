@@ -6,20 +6,21 @@
 using namespace std;
 
 int main() {
-
-	Op* op3 = new Op(3);
-	Op* op4 = new Op(4);
-	Op* op2 = new Op(2);
-	Add* add = new Add(op3, op4);
-	Sqr* sqr = new Sqr(op2);
-	Sub* sub = new Sub(add, sqr);
-	Root* root = new Root(sub);
+	
+	Base* op3 = new Op(3);
+	Base* op4 = new Op(4);
+	Base* op2 = new Op(2);
+	Base* add = new Add(op3, op4);
+	Base* sqr = new Sqr(op2);
+	Base* sub = new Sub(add, sqr);
+	Base* root = new Root(sub);
 
 	cout << "--- PreOrder Iteration ---" << endl;
 	PreOrderIterator* pre_itr = new PreOrderIterator(root);
 	for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next()) { 
+		std::cout << "main(): Current iter is on \n";
 		pre_itr->current()->print();
 		cout << endl;
-                std::cout << "entering next iteration\n";
+                std::cout << "main(): entering next iteration\n";
 	}
 };

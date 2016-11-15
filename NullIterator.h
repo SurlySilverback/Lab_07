@@ -1,6 +1,6 @@
 #ifndef NULL_ITERATOR_H
 #define NULL_ITERATOR_H
-#include "iterator.h"
+#include "Iterator.h"
 class NullIterator: public Iterator {
   //inherited:
   //  Base* self_ptr; 

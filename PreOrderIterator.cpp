@@ -22,9 +22,13 @@ void PreOrderIterator::next() {
   while (this->iterators.size() > 0 && this->iterators.top()->is_done()) {
     delete this->iterators.top();  //FIXME: fix order of delete and setting next
     this->iterators.pop();
-    this->iterators.top()->next();
+    
+    if ( iterators.size() != 0 )
+    {
+        this->iterators.top()->next();
+    }
   }
-  std::cout << "stack empty\n";
+  std::cout << "PreOrderIter.next(): Loop done, stack now empty\n";
 }
 
 bool PreOrderIterator::is_done() {
@@ -36,7 +40,7 @@ bool PreOrderIterator::is_done() {
 
 Base* PreOrderIterator::current() {
   if (this->iterators.size() > 0) {
-    std::cout << "will return top iterator's current\n";
+    //std::cout << "PreOrderIter.current(): stack still > 0\n";
     if (this->iterators.top()->current() == NULL)
       std::cout << "current was pointing to NULL\n";
 
