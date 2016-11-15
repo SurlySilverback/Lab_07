@@ -2,6 +2,7 @@
 #define ITERATOR_H
 
 #include <iostream>
+#include "composite.h"
 
 class Base;
 
