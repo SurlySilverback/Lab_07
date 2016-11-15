@@ -1,8 +1,10 @@
-#include <iostream>
-#include "composite.h"
+#ifndef ITERATOR_H
+#define ITERATOR_H
+
+//fwd declare
+class Base;
 
 class Iterator{
-
     protected:
         Base* self_ptr:
         Base* current_ptr;
@@ -15,3 +17,4 @@ class Iterator{
         virtual bool is_done() = 0;
         virtual Base* current() = 0;
 };
+#endif
