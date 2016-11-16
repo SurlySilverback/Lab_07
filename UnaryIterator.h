@@ -14,16 +14,14 @@ class UnaryIterator: public Iterator {
     Base* current();
 };
 
-UnaryIterator::UnaryIterator(Base* ptr): Iterator(ptr) {std::cout << "Constructor: Unary Iterator\n";}
+UnaryIterator::UnaryIterator(Base* ptr): Iterator(ptr) {}
 
 void UnaryIterator::first() {
   this->current_ptr = this->self_ptr->get_left();
 }
 
 void UnaryIterator::next() {
-  std::cout << "Unary: Inside ";
   this->current_ptr->print();
-  std::cout << "'s next()\n";
   
   this->current_ptr = NULL;
 }

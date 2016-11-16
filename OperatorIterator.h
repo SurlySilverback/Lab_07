@@ -16,7 +16,7 @@ class OperatorIterator: public Iterator {
 };
 
 OperatorIterator::OperatorIterator(Base* ptr): Iterator(ptr) {
-  std::cout << "Constructor: Operator Iterator\n";
+
 }
 
 void OperatorIterator::first() {

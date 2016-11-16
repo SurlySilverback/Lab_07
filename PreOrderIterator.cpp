@@ -28,7 +28,6 @@ void PreOrderIterator::next() {
         this->iterators.top()->next();
     }
   }
-  std::cout << "PreOrderIter.next(): Loop done, stack now empty\n";
 }
 
 bool PreOrderIterator::is_done() {
@@ -49,5 +48,3 @@ Base* PreOrderIterator::current() {
   else
     return NULL;
 }
-
-

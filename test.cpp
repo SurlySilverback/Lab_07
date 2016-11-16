@@ -18,9 +18,7 @@ int main() {
 	cout << "--- PreOrder Iteration ---" << endl;
 	PreOrderIterator* pre_itr = new PreOrderIterator(root);
 	for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next()) { 
-		std::cout << "main(): Current iter is on \n";
 		pre_itr->current()->print();
 		cout << endl;
-                std::cout << "main(): entering next iteration\n";
 	}
 };
