@@ -16,6 +16,7 @@ void PreOrderIterator::first() {
 
 void PreOrderIterator::next() {
   Iterator* it = iterators.top()->current()->create_iterator();
+
   it->first();
   iterators.push(it);
   
@@ -31,20 +32,23 @@ void PreOrderIterator::next() {
 }
 
 bool PreOrderIterator::is_done() {
-  if (iterators.size() == 0)
+  
+  //if (iterators.size() == 0)
+  if ( iterators.empty() )  
     return true;
   else
     return false;
 }
 
 Base* PreOrderIterator::current() {
-  if (this->iterators.size() > 0) {
-    //std::cout << "PreOrderIter.current(): stack still > 0\n";
+  //if (this->iterators.size() > 0){ 
+  if ( !iterators.empty() ) { 
+  
     if (this->iterators.top()->current() == NULL)
       std::cout << "current was pointing to NULL\n";
 
     return (this->iterators.top())->current();
-  } 
+  }
   else
     return NULL;
 }

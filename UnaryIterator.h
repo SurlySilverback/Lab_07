@@ -21,7 +21,6 @@ void UnaryIterator::first() {
 }
 
 void UnaryIterator::next() {
-  this->current_ptr->print();
   
   this->current_ptr = NULL;
 }
@@ -33,7 +32,7 @@ bool UnaryIterator::is_done() {
 }
 
 Base* UnaryIterator::current() {
-  //std::cout << "Returning unaryiter's current\n";
+
   return this->current_ptr;
 }
 #endif

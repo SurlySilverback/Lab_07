@@ -9,7 +9,7 @@ class Iterator {
         Base* current_ptr;
 
     public:
-        Iterator ( Base* ptr ) { this->self_ptr = ptr; }
+        Iterator ( Base* ptr ) { this->self_ptr = ptr; this->current_ptr = ptr; }
 
         virtual void first() = 0;
         virtual void next() = 0;
